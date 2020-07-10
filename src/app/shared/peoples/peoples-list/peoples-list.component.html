@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" class="white-color">
+      <ion-img class="ion-padding-r-10 header-logo"
+      src="assets/svg/nah_logo_white.svg"></ion-img>
+      <ion-text class="ion-vertical-align-content white-color ion-margin-t-5">
+        {{label}}
+      </ion-text>
+    </ion-buttons>
+    <ion-buttons slot="end" class="white-color" (click)="dismiss()">
+      Close
+     </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list class="meeting-list">
+    <ion-item class="meeting-item" *ngFor="let f of peoples">
+      <ion-grid class="ion-no-padding" >
+        <ion-row class="ion-nowrap ion-align-items-center">
+          <ion-col class="img-left ion-no-padding">
+            <ion-thumbnail class="" style="display: flex;align-items: center;">
+              <ion-img class="avatar" [src]="f.user.imageUrl"></ion-img>
+            </ion-thumbnail>
+  
+          </ion-col>
+          <ion-col class="ion-no-padding" style="display: flex;flex-direction:column;justify-content: center;">
+            <ion-label class="meeting-title">{{f.user.displayName}} </ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-nowrap row-last ion-align-items-center ion-padding-b-5">
+          <!-- <ion-col class="ion-no-padding">
+            <label class="meeting-date" style="display: block;">
+              {{f.createdDate | date:'shortTime'}} - {{f.updatedDate | date:'shortTime'}} </label>
+          </ion-col> -->
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+</ion-content>

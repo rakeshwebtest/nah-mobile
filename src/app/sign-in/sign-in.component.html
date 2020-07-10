@@ -1,0 +1,78 @@
+<ion-content >
+  <ion-grid style="height: 100%;align-items: center;justify-content: center;display: flex;flex-direction: column;padding: 0;">
+    <ion-row class="ion-align-items-center">
+      <ion-col class="ion-text-center">
+        <ion-button color="light">
+          <ion-label> Hey, Let us know about your Noer</ion-label>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center margin-top-40">
+      <ion-col class="ion-text-center">
+        <ion-label>Select type of Noer</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row class="type-of-noer" style="align-items: baseline;width:100%;">
+      <ion-col class="ion-text-center align-center ion-activatable" (click)="noerSelection('anties')">
+        <ion-avatar class="avatar ion-align-items-center" [ngClass]="{ active: profile.typeOfNoer == 'anties' }">
+          <ion-icon class="custom-antie"></ion-icon>
+          <!-- <ion-img class="" style="width:30px;background: #fff;padding: 5px;border-radius: 5px;margin-right: 5px;" src="assets/images/ic_anti.png"></ion-img> -->
+          <!-- <ion-icon name="people"></ion-icon> -->
+        </ion-avatar>
+        <ion-label class="ion-padding-t-5">Antie's</ion-label>
+        <ion-label class="ion-text-center ion-padding-t-5" style="font-size: small; opacity: 0.5;"> What are you apposed to ?
+        </ion-label>
+        <ion-ripple-effect></ion-ripple-effect>
+      </ion-col>
+      <ion-col class="ion-text-center align-center ion-activatable ion-no-padding" (click)="noerSelection('rejection')">
+        <ion-avatar class="avatar ion-align-items-center" [ngClass]="{ active: profile.typeOfNoer == 'rejection' }">
+          <ion-icon class="custom-reject"></ion-icon>
+          <!-- <ion-icon class="ion-align-items-center" name="people"></ion-icon> -->
+        </ion-avatar>
+        <ion-label class="ion-padding-t-5">Rejector</ion-label>
+        <ion-label class="ion-text-center ion-padding-t-5" style="font-size: small; opacity: 0.5;">What you refuse to accept ?
+        </ion-label>
+        <ion-ripple-effect></ion-ripple-effect>
+      </ion-col>
+      <ion-col class="ion-text-center align-center ion-activatable" (click)="noerSelection('hater')">
+        <ion-avatar class="avatar ion-align-items-center" [ngClass]="{ active: profile.typeOfNoer == 'hater' }">
+          <ion-icon class="custom-hater"></ion-icon>
+          <!-- <ion-icon name="people"></ion-icon> -->
+        </ion-avatar>
+        <ion-label class="ion-padding-t-5">Hater</ion-label>
+        <ion-label class="ion-text-center ion-padding-t-5" style="font-size: small; opacity: 0.5;">What  passionate you to  dislike someone ?
+        </ion-label>
+        <ion-ripple-effect></ion-ripple-effect>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-margin-top margin-top-40">
+      <ion-col class="ion-text-center">
+        <!-- <ion-label>Chooses your city</ion-label> -->
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center" style="width: 80%;">
+      <ion-col size="12">
+        <ionic-selectable item-content  closeButtonSlot="end" closeButtonText="Close"
+        [(ngModel)]="profile.city" placeholder="Select Your City" itemValueField="id"
+        [hasInfiniteScroll]="true"
+        (onSearch)="searchCitites($event)"
+        (onInfiniteScroll)="getMoreCities($event)"
+         itemTextField="name" [items]="cityList" [canSearch]="true">
+        </ionic-selectable>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center ion-margin-top margin-top-40">
+      <ion-button color="danger" *ngIf="!showUpdateProfileBtn" (click)="onCreateGroup()" [disabled]="!profile.typeOfNoer || !profile.city">
+        Choose your 'Say No To Group'
+      </ion-button>
+      <ion-button color="danger" *ngIf="showUpdateProfileBtn" (click)="updateProfile()" [disabled]="!profile.typeOfNoer || !profile.city">
+        Update Profile
+      </ion-button>
+    </ion-row>
+    <!-- <ion-row class="ion-justify-content-center">
+      <ion-button color="light" (click)="updateSignIn()">
+        START EXPLORING
+      </ion-button>
+    </ion-row> -->
+  </ion-grid>
+</ion-content>

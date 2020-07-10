@@ -1,0 +1,68 @@
+ion-icon {
+  &[class*="custom-"] {
+    mask-size: contain;
+    mask-position: 50% 50%;
+    mask-repeat: no-repeat;
+    background: currentColor;
+    width: 1em;
+    height: 1em;
+  }
+
+
+  &[class*="custom-google"] {
+    mask-image: url(assets/svg/google.svg);
+  }
+  &[class*="custom-antie"] {
+    mask-image: url(assets/svg/ic_anti.svg);
+  }
+  &[class*="custom-reject"] {
+    mask-image: url(assets/svg/ic_reject.svg);
+  }
+  &[class*="custom-hater"] {
+    mask-image: url(assets/svg/ic_hater.svg);
+  }
+  &[class*="custom-logo"] {
+    mask-image: url(assets/images/logo.png);
+  }
+  &[class*="custom-all-meetings"] {
+    mask-image: url(assets/svg/ic_all_meetings.svg);
+  }
+  &[class*="custom-created-by-me"] {
+    mask-image: url(assets/svg/ic_created_by_me.svg);
+  }
+  &[class*="custom-upcoming"] {
+    mask-image: url(assets/svg/ic_upcoming.svg);
+  }
+  &[class*="custom-users"] {
+    mask-image: url(assets/svg/users.svg);
+  }
+  &[class*="custom-star"] {
+    mask-image: url(assets/svg/star.svg);
+  }
+  &[class*="custom-star-o"] {
+    mask-image: url(assets/svg/star-o.svg);
+  }
+  &[class*="custom-notifications"] {
+    mask-image: url(assets/svg/notifications.svg);
+  }
+  &[class*="custom-posts"] {
+    mask-image: url(assets/svg/posts.svg);
+  }
+  &[class*="custom-add"] {
+    mask-image: url(assets/svg/add.svg);
+  }
+  &[class*="custom-search"] {
+    mask-image: url(assets/svg/search.svg);
+  }
+}
+// ion-back-button {
+//   &[class*="back"] {
+//     mask-size: contain;
+//     mask-position: 50% 50%;
+//     mask-repeat: no-repeat;
+//     background: currentColor;
+//     width: 1em;
+//     height: 1em;
+//     mask-image: url(assets/svg/ic_back.svg);
+//   }
+// }

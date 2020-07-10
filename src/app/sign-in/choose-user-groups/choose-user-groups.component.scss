@@ -1,0 +1,19 @@
+.group-item{
+    flex: 0 0 auto;
+    width: auto;
+    padding: 2px;
+    ion-chip {
+        border-radius: 20px;
+        margin: 0;
+        // width: 100%;
+        font-size: 12px;
+        &.active{
+            background-color: #f00;
+            color:white;
+        }
+    }
+
+}
+.add-btn{
+    bottom: 5%;
+}

@@ -1,0 +1,42 @@
+<ion-content>
+  <form (ngSubmit)="updateSignIn()">
+    <ion-row>
+      <ion-col size="12" class="bg-red">
+        <ion-text class="text-medium" color="white" size="small">
+          <p class="ion-no-margin ion-padding-10 ion-text-center white-color">
+            <strong>Create A Group</strong>
+          </p>
+        </ion-text>
+      </ion-col>
+      <ion-col size="12" class="ion-text-center">
+        <ion-chip> Now, think about </ion-chip>
+      </ion-col>
+      <ul style="margin-top: 0px;font-size: 14px;">
+        <li>What do you against the most?</li>
+        <li>What do you hate the most</li>
+        <li>What do you rejects the most?</li>
+      </ul>
+
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12">
+        <ion-item class="border border-b-none">
+          <ion-label><strong>Say No To</strong></ion-label>
+          <!-- <ion-label position="floating">Enter A Group Name</ion-label> -->
+          <ion-input name="newGroupName" placeholder="Enter Group Name" autofocus="true" [(ngModel)]="newGroupName">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button color="danger" type="submit" [disabled]="!newGroupName">
+          Add Group
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button color="light" (click)="dismiss()">
+          Close
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" class="white-color" >
+      <ion-back-button></ion-back-button>
+      <ion-img class="ion-padding-r-10 header-logo"
+      src="assets/svg/nah_logo_white.svg"></ion-img>
+      <ion-text class="ion-vertical-align-content white-color ion-margin-t-5">
+        Choose your Say No To Group
+      </ion-text>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-vertical-align-content">
+  <ion-fab class="add-btn" vertical="end" horizontal="end" slot="fixed" (click)="presentModal()">
+    <ion-fab-button color="danger">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-searchbar class="sticky-search" (ionInput)="searchFilter($event)" (ionBlur)="searchFilter($event)"></ion-searchbar>
+  <ion-grid class="group">
+    <ion-row class="ion-justify-content-center">
+      <ion-col class="group-item" *ngFor="let item of filterGroupList">
+        <ion-chip class="chip" *ngIf="item.createdBy && item.createdBy.id !== userInfo.id" [ngClass]="{active:item.active}" (click)="itemClick(item)">
+          <ion-label style="white-space: nowrap;"><strong>Say No To</strong> {{item.name}}</ion-label>
+        </ion-chip>
+        <ion-chip class="chip active" *ngIf="item.createdBy && item.createdBy.id === userInfo.id" >
+          <ion-label style="white-space: nowrap;"><strong>Say No To</strong> {{item.name}}</ion-label>
+        </ion-chip>
+      </ion-col>
+      <ion-row class="ion-align-items-center no-meetings" *ngIf="filterGroupList.length ===0">
+        <ion-col class="ion-justify-content-center" style="display: flex;align-items: center;">
+          say NO groups
+        </ion-col>
+      </ion-row>
+
+    </ion-row>
+  </ion-grid>
+  <!-- <ion-row class="ion-justify-content-center">
+    <ion-col size="6">
+      <ion-item class="border border-b-none" >
+        <ion-label position="floating">Create A Group</ion-label>
+        <ion-input [(ngModel)]="profile.newGroupName" ></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row> -->
+  
+</ion-content>
+<ion-footer>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="10">
+      <ion-button style="width:100%;" color="danger" (click)="updateSignIn()"  [disabled]="profile.followGroups.length < 1 ">
+        START EXPLORING
+      </ion-button>
+
+    </ion-col>
+  </ion-row>
+</ion-footer>

@@ -1,0 +1,199 @@
+.image-thumb{
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+    img{
+        border-radius: 7px;
+    }
+}
+ion-refresher {
+   // position: inherit !important;
+}
+.meeting-list{padding-top: 0px;padding-bottom: 35px;}
+.meeting-item{
+    padding-bottom: 0px;
+    .item-native{
+        padding: 0 ;
+    }
+    .img-left{
+        max-width: 35px;
+    }
+    .avater{
+        width: 30px;
+        height: 30px;
+        &.small{
+            width: 20px;
+            height: 20px;
+            background-color: #ccc;
+            text-align: center;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 5px;
+            min-width: 20px;
+            margin-bottom: 2px;
+        }
+    }
+    .meeting-title{
+        width: 100%;
+        font-size: 14px;
+        font-weight: 600;
+        white-space: inherit;
+    }
+    .meeting-sub-title{
+        font-size: 12px;
+        color: #000000;
+    }
+    .meeting-desc{
+        font-size:12px;
+        color:#000;
+        padding-bottom:0px;
+    }
+    .meeting-date{
+        font-size: 12px;
+        padding-bottom: 5px;
+        padding-top: 3px;
+        color: #000000;
+    }
+    .fallowing-members{
+        font-size: 10px;
+        color: #999;
+        display: flex;
+        align-items: center;
+    }
+    &:last-child{
+        .row-last{
+            // padding-bottom: 35px;
+        }
+    }
+}
+// .no-meetings{
+//     background-color: #d8d8d8;
+//     border-radius: 5px;
+//     padding: 7px;
+//     margin: 5px;
+//     color: #827d7d;
+//     font-size: 14px;
+// }
+.count-circle{
+    display: flex;
+    width: 15px;
+    height: 15px;
+    background-color: #999;
+    color: #fff;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3px;
+}
+
+
+.post-widget{
+    overflow-y: auto;
+}
+.post-image{
+    width: 100%;
+    height: auto;
+}
+.post-avatar{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+.col-avatar{
+    padding-left: 0;
+}
+.col-avatar-right{
+    color: #000;
+    padding-right: 0;
+    ion-label{
+        display: flex;
+        justify-content: space-between;
+        span{
+            font-size: 12px;
+        }
+    }
+    p{
+        margin: 5px 0;
+    }
+    .text-name{
+        padding-right: 5px;
+        font-weight: 600;
+    }
+    .text-agenda{
+        padding-right: 5px;
+        border-right: 1px solid #FB0102;
+        margin-right: 5px;
+        font-weight: 600;
+    }
+    .post-stars{
+        flex: auto;
+        ion-icon{
+            color: #999;
+        }
+    }
+}
+.post-list{
+    margin: 15px 0 0;
+    // border-bottom: 15px solid #ccc;
+    box-shadow: 0px 0px 6px #e2e2e2;
+    border-radius: 5px;
+    width: 100%;
+    ion-card-header{
+        padding: 10px;
+    }
+    ion-card-content{
+        padding: 0 10px 10px;
+    }
+    ion-card-title{
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 0px;
+        ion-text{
+            padding-right: 5px;
+            color: #FB0102;
+        }
+        ion-icon{
+            color: #FB0102;
+            padding-left: 5px;
+        }
+    }
+}
+.post-description{
+    p{
+        font-size: 12px;
+        line-height: 16px;
+        margin: 2px 0;
+    }
+}
+.post-footer{
+    display: flex;
+    align-items: center;
+    span{
+        display: flex;
+        align-items: center;
+        padding-right: 10px;
+        color: #333;
+        ion-icon{
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            background-color: #ccc;
+            font-size: 12px;
+            padding: 5px;
+            margin-right: 3px;
+        }
+    }
+}
+.meeting-desc{
+    font-size:12px;
+    color:#000;
+    padding-bottom:0px;
+}
+.meeting-date{
+    font-size: 12px;
+    padding-bottom: 5px;
+    padding-top: 3px;
+    color: #000000;
+}

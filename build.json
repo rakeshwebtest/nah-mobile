@@ -1,0 +1,32 @@
+{
+    "android": {
+        "debug": {
+            "keystore": "./keys/android/nah.keystore",
+            "storePassword": "nahnah",
+            "alias": "key0",
+            "password" : "nahnah",
+            "keystoreType": ""
+        },
+        "release": {
+            "keystore": "./keys/android/nah.keystore",
+            "storePassword": "nahnah",
+            "alias": "key0",
+            "password" : "nahnah",
+            "keystoreType": ""
+        }
+    },
+    "ios": {
+        "debug": {
+          "codeSignIdentity": "iPhone Developer",
+          "provisioningProfile": "Adhoc_profile",
+          "developmentTeam": "V798ATU9LP",
+          "packageType": "development"
+        },
+        "release": {
+          "codeSignIdentity": "iPhone Distribution",
+          "provisioningProfile": "Adhoc_profile",
+          "developmentTeam": "V798ATU9LP",
+          "packageType": "ad-hoc"
+        }
+      }
+}
